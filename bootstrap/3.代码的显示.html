@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<style type="text/css">
+		.container {
+			margin-top: 30px;
+		}
+	</style>
+	<title>代码的显示</title>
+</head>
+<body>
+	<div class="container">
+		<pre class="pre-scrollable">
+			&lt;div class="box"&gt;如果要显示多行的代码要使用pre标签，注意要使用实体字符。
+			这里会保留空格和缩进，如果我有很多内容空了很多行，因为代码会很长可以通过pre-scrollable类将pre标签的max-height设置为350，超出会有滚动条。
+			就像这样，
+			这样
+			，这样
+			，这样
+			。这样
+			，这样
+			这样这样
+			，这样
+			，这样
+			。这样
+			，这样
+			这样这样
+			，这样
+			，这样
+			。这样
+			，这样
+			这样这样
+			会展业昂&lt;div&gt;
+		</pre>
+		<code>
+			&lt;input type="button" value="如果是内联就是用code标签"&gt;
+		</code>
+		<p>如果想要回答就请输入：<kbd>ctrl+enter</kbd>，如果有提示用户输入的操作用kdb标签包裹操作的按键。</p>
+		<samp>电脑输出的内容用smap标签包裹。</samp>
+		<p>变量用var标签包裹，例如实现y = ab + c - d，每一个变量都要被var包裹，这样会使变量有个简单的倾斜效果。</p>
+		<p><var>y</var> = <var>a</var><var>b</var> + <var>c</var> - <var>b</var></p>
+	</div>
+</body>
+</html>
