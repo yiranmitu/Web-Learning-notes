@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<style type="text/css">
+		.container {
+			margin: 30px auto;
+			background-color: #eee;
+
+		}
+	</style>
+	<title>排版样式</title>
+</head>
+<body>
+	<div class="container">
+		<h1>我是一个标题<small>我是一个副标题</small></h1>
+		<span class="h2">我不是标题标签<span class="small">我也不是samll元素用作副标题</span></span>
+		<!-- 通过class类.h1-h6和.samll可以模仿标题和副标题，但是内联依然是内联，并不能设置宽和高也不会独占一行 -->
+	</div>
+	<div class="container">
+		<p style="background-color: #f60">我是一个段落。</p>
+		<p class="lead" style="background-color: #f60">我也是一个段落，但是我与其它段落不同我有lead类，这使我的字体变大，并且margin-bottom变成了20。</p>
+		<p style="background-color: #f60">我也是一个段落。我们这些段落的默认字体都是14px，行高为1.428即20px，颜色为#333，这些都设置在body中我们会继承，同时我们有一个margin-bottom为10px，这显而易见。</p>
+	</div>
+	<div class="container">
+		<p>我是段落但是我中间有一个<mark>mark用来标记</mark></p>
+		<p>我是段落但是我中间有一个<del>del用来删除</del></p>
+		<p>我是段落但是我中间有一个<s>s表示无用的文本</s></p>
+		<p>我是短多但是我中间有一个<ins>ins表示额外插入的文本</ins></p>
+		<p>我是段落但是我中间有一个<u>u只是用来单纯的插入下划线~~</u></p>
+		<p>我是段落但是我中间有一个<small>samll所以我的字号会变成父容器的85%，这一点和在标题元素中不同，虽然我是small标签但是我有点特殊，可以给其它元素加上samll类达到此效果。</small></p>
+		<p>我是段落但是我中间有一个<strong>strong用来增加宽度强调一段文本</strong></p>
+		<p>我是段落但是我中间有一个<em>em用来使用斜体强调一段文本</em></p>
+	</div>
+	<div class="container">
+		<p class="text-left">我的对齐方式是left，使用text-left类</p>
+		<p class="text-right">我的对齐方式是right，使用text-right类</p>
+		<p class="text-center">我的对齐方式是center，使用text-center类</p>
+		<p class="text-justify">我的对齐方式是justify，使用text-justify类</p>
+		<p class="text-nowrap" style="width: 20px; background-color: #f60">我的对齐方式是nowrap，使用text-nowrap类，我的特点是不会换行。</p>
+	</div>
+	<div class="container">
+		<p class="text-lowercase">我全是小写的，SUIRANWOYONGDESHIDAXIEDEPINYIN，我用text-lowercase类。</p>
+		<p class="text-uppercase">我全是大写的，suiranwodepinyindoushixiaoxiede，我用text-uppercase累。</p>
+		<p class="text-capitalize">我是首字母大写，hello wrold，我用capitalize类。</p>
+	</div>
+	<div class="container">
+		<p>这是一行代码然后将有个缩略语<abbr title="不要略我们好好玩耍" class="initialism他">略略</abbr>bootstrap为abber增加了鼠标问号和下滑点线。同时为缩略语添加initialism类，可以使缩略语的字变小一些，但是很不明显~</p>
+	</div>
+	<div class="container">
+		<address>
+			address用来表示作者信息地址电话等。逐条内容用<br>分隔。
+		</address>
+	</div>
+	<div class="container">
+		<blockquote class="blockquote-reverse">
+			<p>blockquot用来表示引用，在这个标签中间用p来显示引用的内容。</p>
+			<p>可以通过给blockquote标签添加blockquote-revers类来使其右对齐。</p>
+			<footer>可以添加footer标签来表明引用来源这里面还可以包含一个短引用标签<cite title="奇闻异事录">奇闻异事录</cite></footer>
+		</blockquote>
+	</div>
+	<div class="container">
+		<ul class="list-unstyled list-inline">
+			<li class="item">我是列表项目，为ul标签添加list-styled类可以消除项目符号。</li>
+			<li class="item">我是列表项目，为ul标签添加list-inline类可以使项为内联。</li>
+			<li class="item">我是列表项目</li>
+		</ul>
+	</div>
+	<div class="container">
+		<dl class="dl-horizontal">
+			<dt>什么dl</dt>
+			<dd>dl是描述列表，比如你问了什么的dl，那么我就可以给你解释啦。</dd>
+		</dl>
+		<dl class="dl-horizontal">
+			<dt>什么dl什么dl什么dl什么dl什么dl什么dl什么dl什么dl什么dl什么dl</dt>
+			<dd>dl是描述列表，比如你问了什么的dl，那么我就可以给你解释啦。</dd>
+		</dl>
+	</div>
+</body>
+</html>
