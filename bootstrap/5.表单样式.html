@@ -10,61 +10,273 @@
 	<style type="text/css">
 		.container {
 			margin-top: 30px;
-
+			background-color: #ccc;
+			padding: 12px;
 		}
 	</style>
-	<title>代码的显示</title>
+	<title>表单显示</title>
 </head>
-<body class="">
-	<div class="container table-responsive">
-		<table class="table table-striped table-bordered table-hover table-condensed">
-			<caption>test表格</caption>
-			<thead>
-				<tr>
-					<th>姓名</th>
-					<th>年龄</th>
-					<th>班级</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>张苏纳</td>
-					<td>17岁</td>
-					<td>12班</td>
-				</tr>
-				<tr>
-					<td>张苏纳</td>
-					<td>17岁</td>
-					<td>12班</td>
-				</tr>
-				<tr>
-					<td>张苏纳</td>
-					<td>17岁</td>
-					<td>12班</td>
-				</tr>
-				<tr class="active">
-					<td>张苏纳</td>
-					<td>17岁</td>
-					<td>12班</td>
-				</tr>
-				<tr class="sr-only">
-					<td>张苏纳</td>
-					<td>17岁</td>
-					<td>12班</td>
-				</tr>
-			</tbody>
-		</table>
+<body>
+	<div class="container">
+		<form>
+			<div class="form-group">
+				<label for="email">请输入邮箱地址：</label>
+				<input type="email" placeholder="email" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="password">请输入密码：</label>
+				<input type="password" class="form-control" id="password">
+			</div>
+			<div class="form-group">
+				<label for="file">选择要上传的文件：</label>
+				<input type="file" id="file">
+				<p class="help-block">文件大小不能超过500m</p>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> 记住密码
+				</label>
+			</div>
+			<button type="submit" class="btn btn-info">提交</button>
+		</form>
 	</div>
 	<div class="container">
-		<p>通过给table标签table类赋予基本的样式。</p>
-		<p>通过给table标签table-striped类使tbody内的行具有斑马向效果。</p>
-		<p>通过给table标签table-bordered类使每个单元格都有边框。</p>
-		<p>通过给table标签table-hover类使tbody内的行具有鼠标悬浮特殊效果。</p>
-		<p>通过给table标签table-condensed类，使每个单元格的padding减半，看起来高度变低，更加紧凑。</p>
-		<p>状态类包括active、success、info、warning、danger</p>
-		<p>这些状态给tr元素增加，active表示选中状态，会给当前行一个颜色，如果有tabl-hover当悬浮上的时候，这个颜色会加深。success表示成功或者积极的。info表示提示信息或者动作。warning表示警告，用户需要注意的地方。danger表示危险或者有风险的操作，例如删除。</p>
-		<p>通过给tr增加sr-only类，会使这一行隐藏。这个表格有五行但是隐藏了最后一行只显示四行。</p>
-		<p>为包含table类的父级增加table-responsive类，即可是table在小屏幕即小于768时出现滚动条，大于时滚动条消失。但是我加了不好使，一会在看看。？？？</p>
+		<p>将表单元素如input，select，textarea，这些给与control类，将会使他们的长度为100%。</p>
+		<p>label标签的for属性关联相关的input的id这样出发文字也会获得焦点。</p>
+		<p>将相关的部分如label和input放在form-group中这样他们会形成一个整体。</p>
+		<p>给提示性文字例如不要忘记密码之类的增加help-block类，会使他们的字体变淡。</p>
+		<p>将复选框包裹在checkbox类中会将其中的文字和选框争气排列。</p>
+		<p>给form元素增加form-inline类会使form变为内联，即所有的内容都会一排显示，但当屏幕小于768时会失效，就想当没有增加form-line类。</p>
+	</div>
+	<div class="container">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email" class="sr-only">请输入邮箱地址：</label>
+				<input type="email" placeholder="email" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="password" class="sr-only">请输入密码：</label>
+				<input type="password" class="form-control" id="password">
+			</div>
+			<button type="submit" class="btn btn-info">提交</button>
+		</form>
+	</div>
+	<div class="container">
+		<p>有时候并不需要显示label标签中的字但是label标签是必须的，所以可以通过给label标签添加sr-only类隐藏</p>
+	</div>
+	<div class="container">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="email" class="col-sm-2 control-label">请输入邮箱地址：</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="email" placeholder="请输入邮箱地址" id="email">
+					<p class="help-block">请输入正确的邮箱格式</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-2 control-label">请输入密码：</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="password" placeholder="请输入密码" id="password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox">记住密码
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<button type="submit" class="btn btn-info">submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<p>可以通过给form添加form-horizontal类，结合栅格创建，这时候不需要添加额外的row，form-group就相当于row。如果出现单条的情况可以设置宽度，然后用col-sm-offest-2列偏移来纠正位置。并且要记住给label标签加上control-label类，才能右对齐。</p>
+	</div>
+	<div class="container">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="text" class="sr-only">价格输入框：</label>
+				<div class="input-group">
+					<div class="input-group-addon">$</div>
+					<input type="text" class="form-control" id="text" placeholder="请输入价钱">
+					<div class="input-group-addon">.00</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-danger">提交</button>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<p>可以通过inputgroup-addon类增加特殊的符号，然后通过按钮组类input-group将其包裹组合到一起。</p>
+	</div>
+	<div class="container">
+		<input type="text" class="form-control" placeholder="可以给任何输入控件增加fomr-control类">
+		<textarea class="form-control" rows="6">我是一个textarea当然也可以应用，不过我需要通过rows属性增加高度，我的宽度已经是100%了。</textarea>
+	</div>
+	<div class="container">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="beijing" name="city">
+				你最喜欢的城市是北京
+			</label>
+		</div>
+		<div class="checkbox disabled">
+			<label>
+				<input type="checkbox" value="shanghai" name="city" checked="">
+				你最喜欢的城市是上海
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="sex" name="nan">
+				你最喜欢的人是男生
+			</label>
+		</div>
+		<div class="radio disabled">
+			<label>
+				<input type="radio" name="sex" name="nv">
+				你最喜欢的人是女生
+			</label>
+		</div>
+	</div>
+	<div class="container">
+		<p>复选框包含在checkbox类中，单选框包含在radio类中。通过disabled可以实现禁用。checked是默认选项，无论是单选框还是多选框关联的name属性应该相同。</p>
+	</div>
+	<div class="container">
+		<label class="checkbox-inline">
+			<input type="checkbox" value="beijing" name="city">
+			你最喜欢的城市是北京
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" value="shanghai" name="city" checked="">
+			你最喜欢的城市是上海
+		</label>
+		<label class="radio-inline">
+			<input type="radio" name="sex" name="nan">
+			你最喜欢的人是男生
+		</label>
+		<label class="radio-inline">
+			<input type="radio" name="sex" name="nv">
+			你最喜欢的人是女生
+		</label>
+	</div>
+	<div class="container">
+		<p>内联单选框或者复选框不需要在每个外层包裹checkbox类或者radio类，只需要在label增加checkbox-inline类或者radio-inline类</p>
+	</div>
+	<div class="container">
+		<select class="form-control" multiple>
+			<option>第一项</option>
+			<option>第一项</option>
+			<option>第一项</option>
+			<option>第一项</option>
+			<option>第一项</option>
+		</select>
+	</div>
+	<div class="container">
+		<p>为select添加form-control，如果给select添加了multiple属性则会显示所有选项。</p>
+	</div>
+	<div class="container">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">邮箱已经为你准备好了：</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">398883362@qq.com</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label" for="password">请输入密码：</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<button type="submit" class="btn btn-info">submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<p>如果文本框不是用来输入而是要展示已经有了的内容用p标签代替，并且给p标签赋予form-control-static类。同样如前所述直接使用form-inline并不配合栅格就会一行显示。</p>
+	</div>
+	<div class="container">
+		<input type="text" class="form-control" placeholder="禁用状态" disabled="">
+		<input type="text" class="form-control" placeholder="只读状态" readonly>
+	</div>
+	<div class="container">
+		<div class="form-group has-error">
+			<label for="text" class="control-label">请输入帐号：</label>
+			<input type="text" class="form-control" id="text" placeholder="请输入帐号">
+			<p class="help-block">帐号不能小于十五位</p>
+		</div>
+		<div class="form-group">
+			<label for="password">请输入密码：</label>
+			<input type="password" class="form-control" id="password" placeholder="密码">
+		</div>
+		<div class="checkbox has-success">
+			<label>
+				<input type="checkbox">这是一个复选按钮
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">这是一个复选按钮
+			</label>
+		</div>
+	</div>
+	<div class="container">
+		<p>校验状态，has-warning、has-error、has-success，这些状态给父元素，包含在这个元素中的具有form-control、control-label、help-block都会受到这些状态的影响。</p>
+	</div>
+	<div class="container">
+		<div class="form-group has-error has-feedback">
+			<label for="text">情输入密码：</label>
+			<input type="text" class="form-control" id="text">
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+		</div>
+		<div class="form-group has-success has-feedback">
+			<label for="password" class="control-label">随便你想写什么啦：</label>
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="password" id="password" class="form-control">
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<p>通过添加feedback类可以对输入框添加反映图片。为父级添加后在input后面增加一个span标签为期添加图片类，在增加爱form-control-feedback类。</p>
+	</div>
+	<div class="container">
+		<input type="text" class="form-control input-lg">
+		<div class="form-group form-group-lg">
+			<label for="text">输入点什么东西：</label>
+			<input type="text" class="form-control" placeholder="输入点什么东西">
+		</div>
+	</div>
+	<div class="container">
+		<p>可以通过为input添加input-sm等类来控制他的尺寸，同时也可以给form-group再次添加一个form-group-sm这样的类控制整体大小</p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<input type="text" name="" placeholder="col-md-2" class="form-control">
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="" placeholder="col-md-2" class="form-control">
+			</div>
+			<div class="col-md-2">
+				<input type="text" name="" placeholder="col-md-2" class="form-control">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<p>最后可以通过使用栅格系统，控制输入框的小，即用一个栅格列将input元素包裹</p>
 	</div>
 </body>
 </html>
