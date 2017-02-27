@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<style type="text/css">
+		.container {
+			margin-top: 30px;
+		}
+	</style>
+	<title>布局容器和栅格系统</title>
+</head>
+<body>
+	<div class="container" style="background-color: #f60; height: 200px;"></div>
+	<div class="container-fluid" style="background-color: #ccc; height: 200px;"></div>
+	<!-- 布局容器有两个类分别是container和container-fluid，前者支持响应式为固定宽度布局，后者是百分百宽度布局。两者之间不能嵌套二者选一。 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6" style="background-color: red; height: 200px;">col-xs-6</div>
+			<div class="col-xs-6" style="background-color: blue; height: 200px;">col-xs-6</div>
+			<div class="col-xs-6" style="background-color: green; height: 200px;">我是多出来的</div>
+		</div>
+	</div>
+	<!-- 1以上就是一个简单的栅格系统，需要注意的row类必须包含在container或者container-fluid中。
+	2row累表示一行，这一行可以分为12份，在行中，用col-xs-6这样的类表示列来瓜分这12份。
+	3每一列左右默认padding为15px，container容器左右默认也有15px的padding，但是row通过设置左右的负margin将其抵消。
+	4如果设置的列超过12个，即col-xs-6最后的数字在一行中相加超过12，那么多余的部分将另起一行。 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+			<div class="col-md-1" style="background-color: #f60; height: 26px;">col-md-1</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8" style="background-color: red; height: 36px;">col-md-8</div>
+			<div class="col-md-4" style="background-color: red; height: 36px;">col-md-8</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" style="background-color: blue; height: 56px">col-md-4</div>
+			<div class="col-md-4" style="background-color: blue; height: 56px">col-md-4</div>
+			<div class="col-md-4" style="background-color: blue; height: 56px">col-md-4</div>
+		</div>
+	</div>
+	<!-- 这部分的栅格系统通过col-md-创建列，也就是说这些列在超小屏幕或者小屏幕时候是竖直排列的，当屏幕大雨992的时候（桌面显示器）就会在一行排列。 -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8" style="background-color: black; height: 100px;">col-xs-12,col-md-8</div>
+			<div class="col-xs-6 col-md-4" style="background-color: gray; height: 100px;">col-xs-6,col-md-4</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 col-md-4" style="background-color: orange; height: 100px;">ol-xs-6 col-xs-4</div>
+			<div class="col-xs-6 col-md-4" style="background-color: orange; height: 100px;">ol-xs-6 col-xs-4</div>
+			<div class="col-xs-6 col-md-4" style="background-color: orange; height: 100px;">ol-xs-6 col-xs-4</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6" style="background-color: pink; height: 100px;">col-xs-6</div>
+			<div class="col-xs-6" style="background-color: pink; height: 100px;">col-xs-6</div>
+		</div>
+	</div>
+	<!-- 这里的栅格系统通过col-xs和col-md创建，第一列，当小于768的时候按照12，6的列来排列，超出下一行显示。当大于992则分为8，4。之后类似。 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-8" style="background-color: #666; height: 100px;">col-xs-12 col-sm-6 col-md-8</div>
+			<div class="col-xs-6 col-md-4" style="background-color: #ccc; height: 100px">col-xs-6 col-md-4</div>
+		</div>
+	</div>
+</body>
+</html>
