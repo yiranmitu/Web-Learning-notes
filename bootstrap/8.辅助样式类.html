@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<title>辅助类样式</title>
+</head>
+<body>
+	<div class="container">
+		<p>情景文本颜色：text-primary这样格式的类。包括：muted/primary/success/info/warning/danger</p>
+		<p>情景背景颜色：bg-primary这样格式的类。包括：primary/success/info/warning/danger。与文本基本类似没有muted。</p>
+		<p>按钮背景颜色：btn-primary这样格式的类。包括：link/primary/success/info/warning/danger/default</p>
+		<p>表单的状态颜色：has-success这样格式的类。包括：success/warning/error</p>
+		<p>表格行状态颜色：success这样格式的类。包括：active/success/inof/warning/danger</p>
+		<button class="close btn btn-info" type="button"><span>&times;</span></button>
+		<!-- 通过在button中嵌套span元素增加关闭按钮，但是这里要给button的type为button，这样即使给button为btn按钮样式类也会失效，如果没有type为button则可以设置btn类。 -->
+		<br>
+		<button class="btn btn-primary"><span class="caret"></span></button>
+		<div class="clearfix">
+			<div style="width: 200px; height: 500px; background-color: #f60" class="pull-left">pull-left，清除浮动为父级添加clearfix</div>
+			<div style="width: 300px; height: 200px; background-color: #ccc" class="pull-right">pull-right，清除浮动为父级添加clearfix</div>
+		</div>
+		<p>这样的浮动方式不能用在导航条中，导航条中有专门的浮动方式，navbar-left或者navbar-right</p>
+		<div style="width: 200px; height: 200px; background-color: #ccc" class="center-block">这个居中的方法是将元素变为block在将其margin：0 auto；，这个方法应该要有宽度在可以。</div>
+		<div style="width: 200px; height: 200px; background-color: #f60" class="show">
+			show和hidden类可以切换显示和隐藏。
+		</div>
+	</div>
+</body>
+</html>
