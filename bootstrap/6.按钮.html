@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<title>按钮</title>
+</head>
+<body>
+	<div class="container">
+		<a href="#" class="btn btn-default" role="button">a标签当作按钮使用</a>
+		<input type="button" value="input当作按钮使用" class="btn btn-info">
+		<button class="btn btn-success">button当作按钮使用</button>
+		<!-- 1尽可能的使用button元素作为按钮来使用。
+		2如果将a元素当作按钮使用，即不把a当作跳转链接来用则需要给a增加role属性为button。
+		3导航和导航组件只支持button作为按钮来使用。 -->
+		<br>
+		<button class="btn btn-primary btn-lg">button</button>
+		<button class="btn btn-default">button</button>
+		<button class="btn btn-danger btn-sm">button</button>
+		<button class="btn btn-warning btn-xs">button</button>
+		<!-- 按钮的尺寸用btn-lg、btn-sm、btn-xs来实现改变。 -->
+		<br>
+		<button class="btn btn-primary btn-block">btn-block</button>
+		<!-- btn-block类可以将按钮变为块级元素并且宽度为100% -->
+		<a href="#" class="btn btn-default active" role="button">a标签当作按钮使用</a>
+		<input type="button" value="input当作按钮使用" class="btn btn-info active">
+		<button class="btn btn-success active">button当作按钮使用</button>
+		<!-- 为按钮元素添加active类可以实现激活状态，颜色更深有阴影 -->
+		<br>
+		<a href="#" class="btn btn-default active" role="button" disabled>a标签当作按钮使用</a>
+		<input type="button" value="input当作按钮使用" class="btn btn-info active" disabled="">
+		<button class="btn btn-success active" disabled="">button当作按钮使用</button>
+		<!-- 可以为按钮元素添加disabled属性来禁用，但是这里如果对于a标签用作属性会有符号提示，当作类就是不可选定没有任何符号。 -->
+	</div>
+</body>
+</html>
