@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<title>图片</title>
+</head>
+<body>
+	<div class="container">
+		<div style="width: 200px; height: 160px; border: 1px solid #000">
+			<img src="images/img1.jpg" alt="flowers" class="img-responsive">
+			<!-- 通过对图片增加img-responsive类，将其max-width：100%，height：auto，display：block，这样设置图片会根据父元素的大小而缩放。 -->
+		</div>
+		<div style="width: 600px; height: 360px; border: 1px solid #000">
+			<img src="images/img1.jpg" alt="flowers" class="img-responsive center-block">
+			<!-- 通过center-block可以使图片在其父元素中居中显示 -->
+		</div>
+		<img src="images/img1.jpg" alt="flowers" class="img-rounded">
+		<img src="images/img1.jpg" alt="flowers" class="img-circle">
+		<img src="images/img1.jpg" alt="flowers" class="img-thumbnail">
+	</div>
+</body>
+</html>
