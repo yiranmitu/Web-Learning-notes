@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<title>字体图标</title>
+</head>
+<body>
+	<div class="container">
+		<button class="btn btn-success">
+			<span class="glyphicon glyphicon-flash"></span> 闪电
+		</button>
+		<!-- 图标类不应该的元素不应该再有其它类了，图标元素中间不能包含文本或者子元素，最好与文字空一格。就像上面那样。 -->
+		<br>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro"></span> 照相机
+		</button>
+		<!-- 在页面中使用Font Awesome图标库，用法和bootstrap提供的字体相同。 -->
+		<br>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro fa-lg"></span> 照相机
+		</button>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro fa-2x"></span> 照相机
+		</button>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro fa-3x"></span> 照相机
+		</button>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro fa-4x"></span> 照相机
+		</button>
+		<button class="btn btn-info">
+			<span class="fa fa-camera-retro fa-5x"></span> 照相机
+		</button>
+		<!-- 可以使用fa-*x的方式来放大图标 -->
+		<ul class="list-group">
+			<a href="" class="list-group-item"><span class="fa fa-home fa-fw"></span> home</a>
+			<a href="" class="list-group-item"><span class="fa fa-address-card fa-fw"></span> home</a>
+			<a href="" class="list-group-item"><span class="fa fa-ravelry fa-fw"></span> home</a>
+		</ul>
+		<!-- 图标的大小虽然一样，但是由于形状不同会有差异，所以用fa-fw类这样就好像是两端对齐了。 -->
+		<ul class="fa-ul">
+			<li><span class="fa-li fa fa-home"></span> 项目一</li>
+			<li><span class="fa-li fa fa-home"></span> 项目一</li>
+			<li><span class="fa-li fa fa-home"></span> 项目一</li>
+			<li><span class="fa-li fa fa-home"></span> 项目一</li>
+			<li><span class="fa-li fa fa-home"></span> 项目一</li>
+		</ul>
+		<!-- 通过fa-ul和fa-li可以替换项目符号。 -->
+	</div>
+</body>
+</html>
