@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+	<!-- 1如果网页呈现在不同的分辨率上，width=dvice-width可以确保在不同设备上正确显示
+	2initaial-scale=1，确保在网页加载时候以一比一的比例显示，不会有缩放。
+	3maximun-scale=1和user-scalable=no一同试用，可以禁用缩放功能，用户只能滚动，这种情况视情况而使用。
+	4这两条meat标签必须放在最前面。 -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- 引用bootstrap提供的样式文件。 -->
+	<script type="text/javascript" src="javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+	<!-- bootstrap的插件是基于jQuery的，所以必须先引用jquery文件在引用bootstrap提供的插件。 -->
+	<title>基本模版</title>
+	<style type="text/css">
+		form {
+			padding: 22px;
+			margin: 12px 0;
+			background-color: #ccc; 
+			border-radius: 6px;
+		}
+		section {
+			background-color: #eee;
+			padding: 22px;		
+		}
+		.formtext {
+			padding: 22px;
+			margin: 12px 0;
+			background-color: #ccc; 
+			border-radius: 6px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form action="">
+			<div class="form-group">
+				<label for="email">请输入邮箱地址：</label>
+				<input type="email" class="form-control" id="email" placeholder="邮箱地址">
+			</div>
+			<div class="form-group">
+				<label for="password">请输入密码：</label>
+				<input type="password" class="form-control" id="password" placeholder="密码">
+			</div>
+			<div class="form-group">
+				<label for="file">选择文件：</label>
+				<input type="file" id="file">
+				<p class="help-block">文件大小不能超过500M</p>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label><input type="checkbox" checked="">记住密码</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">立即登录</button>
+		</form>
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email">邮箱：</label>
+				<input type="email" name="" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="password">密码：</label>
+				<input type="password" name="" id="password" placeholder="邮箱地址" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-success">登录</button>
+		</form>
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email" class="sr-only">邮箱：</label>
+				<input type="email" name="" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="password" class="sr-only">密码：</label>
+				<input type="password" name="" id="password" placeholder="邮箱地址" class="form-control">
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+					<label><input type="checkbox" checked="">记住密码</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-success">登录</button>
+		</form>
+		<section>
+			<h2>以上就是最基本的表单格式，有一些需要注意</h2>
+			<p>1要将相关联的label和input标签包裹在form-group类里面并且每个input都需要有form-control类，这个类将输入框宽度设置为100%，所以限制form元素的宽度就会更改其宽度。</p>
+			<p>2如果要将表单放在一行显示可以为form增加form-inline类。此时可能不需要label里面的提示内容，这时候可以通过sr-only类将其隐藏。</p>
+			<p>3将选框放在checkbox类中可以对齐，此时input可以被label包裹，方便点击文字也可以触发。</p>
+			<p>4help-block类可以给p元素，会使颜色减淡，用于提示，比如说密码不能超过16位等这类数字。</p>
+			<p>5如果屏幕尺寸小于768会自动变为两行即使是一行显示</p>
+		</section>
+		<form action="" class="form-horizontal">
+			<div class="form-group">
+				<label for="email" class="col-sm-2 control-label">请输入邮箱：</label>
+				<div class="col-sm-10">
+					<input type="input" name="" class="form-control" id="email" placeholder="请输入邮箱">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-sm-2 control-label">密码：</label>
+				<div class="col-sm-10">
+					<input type="password" name="" class="form-control" id="password" placeholder="请输入密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<div class="checkbox">
+						<label><input type="checkbox" name="">请记住密码</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<button type="submit" class="btn btn-primary">立即登录</button>
+				</div>
+			</div>
+		</form>
+		<section>
+			<h2>这种是最常见的对齐方式的表单</h2>
+			<p>1使用form-horizontal类给form标签就像是container一样可以在其中使用row进行栅格布局。</p>
+			<p>2在这里没有需要在使用row，form-group就相当于row</p>
+			<p>3记住密码立即登录，设置相对的格数，在使用列偏移就可以达到效果。</p>
+			<p>4这样七本就可以了，但是一定要给label标签一个control-label类这样才能完全对齐。</p>
+			<p>5给单选框和登录按钮单独一个form-group以创建行。</p>
+		</section>
+		<form action="" class="form-inline">
+			<div class="form-group">
+				<label for="text">请输入正确的价格用来支付：</label>
+				<div class="input-group">
+					<div class="input-group-addon">$</div>
+					<input type="text" class="form-control" id="text" placeholder="输入">
+					<div class="input-group-addon">.00</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">submit</button>
+			</div>
+		</form>
+		<section>
+			<h3>这种合并的表单</h3>
+			<p>1类似将按钮包裹的btn-group这里是input-group，左侧和右侧是input-group-addon</p>
+			<p>2可以通过sr-only隐藏lable标签中的内容</p>
+		</section>
+		<form action="" class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">我是静态控件：</label>
+				<div class="col-sm-10">
+					<p class="form-control-static">这里的内容就不用用户来输入了</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">禁用状态：</label>
+				<div class="col-sm-10">
+					<input type="text" name="" class="form-control" placeholder="disabled" disabled="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">只读状态：</label>
+				<div class="col-sm-10">
+					<input type="text" name="" class="form-control" placeholder="readonly" readonly>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">帮助状态：</label>
+				<div class="col-sm-10">
+					<input type="text" name="" class="form-control" placeholder="help-block">
+					<p class="help-block">我是一条帮助信息，这里的内容将颜色减淡。</p>
+				</div>
+			</div>
+			<div class="form-group has-success">
+				<label class="col-sm-2 control-label">校验状态：</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="has-success">
+				</div>
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="col-sm-2 control-label">我是增加额外图标的状态：</label>
+				<div class="col-sm-10">
+					<input type="text" name="" placeholder="我的右侧有一个图标" class="form-control">
+					<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				</div>
+			</div>
+			<div class="form-group has-success has-feedback">
+				<label class="col-sm-2 control-label">我也是另一种形式：</label>
+				<div class="col-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon">@</span>
+						<input type="text" name="" class="form-control" placeholder="左右两侧都有">
+					</div>
+					<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				</div>
+			</div>
+			<div class="form-group has-warning">
+				<div class="col-sm-10 col-sm-offset-2">
+					<div class="checkbox">
+						<label><input type="checkbox" name="">我也是校验状态</label>
+					</div>
+				</div>
+			</div>
+		</form>
+		<section>
+			<h2>表单的各种状态</h2>
+			<p>1静态状态用p标签代替input并将form-control-static赋予即可。</p>
+			<p>2禁用状态将disabled属性给input就可以，fieldset标签给与disabled属性可以使它包裹的所有控件成为禁止状态。</p>
+			<p>3帮助状态将p标签放在input元素下面并赋予help-block类就可以了。</p>
+			<p>4只读状态给input标签readonly属性。</p>
+			<p>5校验状态给form-group类的标签在添加一个has-success类，校验状态有has-error、has-warning。</p>
+			<p>6如果只在左侧添加提示图标，则需要将input-gorup-addon类包裹到input-group中。</p>
+			<p>7如果给右侧添加则给form-group添加has-feedback类，在输入框的下面添加字体图标形式的类并有feedback类。</p>
+		</section>
+		<hr/>
+		<div class="formtext">
+			<div class="input-group">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control" placeholder="请输入用户名">
+			</div>
+			<div class="input-group">
+				<input type="text" name="" class="form-control" placeholder="情输入邮箱：">
+				<span class="input-group-addon">@qq.com</span>
+			</div>
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon">$</span>
+				<input type="text" class="form-control" placeholder="请输入价钱">
+				<span class="input-group-addon">.00</span>
+			</div>
+			<div class="form-group">
+				<label for="email">情输入邮箱：</label>
+				<div class="input-group">
+					<span class="input-group-addon">123456789@</span>
+					<input type="text" name="" id="email" class="form-control">
+				</div>
+			</div>
+		</div>
+		<section>
+			<h2>输入组件，之前的是必须包裹在form，现在不再form里看看如何灵活。</h2>
+			<p>1与之前的区别在于没有了label，就无需用form-group包裹。</p>
+			<p>2如果需要label标签，我觉得还是最好用form-group包裹比价好。</p>
+			<p>3通过给input-group增加input-group-lg等类来增加尺寸</p>
+		</section>
+		<div class="formtext row">
+			<div class="col-sm-6">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="checkbox">
+					</span>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="radio" name="">
+					</span>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+		</div>
+		<div class="formtext row">
+			<div class="col-sm-6">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-default">yes</button>
+					</span>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button class="btn btn-primary">No</button>
+					</span>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+		</div>
+		<section>
+			<h2>在里面包裹单选框或者复选框或者按钮</h2>
+			<p>1只需要将单选框或者复选框的input包裹在input-group-addon中就可以了。</p>
+			<p>2添加按钮只需要将input-group-addon替换成input-group-btn就可以了。</p>
+		</section>
+		<div class="formtext row">
+			<div class="col-sm-6">
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+							dropdown
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+						</ul>
+					</div>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="input-group">
+					<input type="text" name="" class="form-control">
+					<div class="input-group-btn">
+						<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+							dropdown
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="formtext row">
+			<div class="col-sm-6">
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button class="btn btn-info">yes</button>
+						<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+							<li><a href="">项目1</a></li>
+						</ul>
+					</div>
+					<input type="text" name="" class="form-control">
+				</div>
+			</div>
+		</div>
+		<section>
+			<h2>在里面包裹下拉框</h2>
+			<p>1单纯的下拉是包裹在dorpdown类里的，如果给按钮input-btn里面加就不需要dropdown了。</p>
+			<p>2分裂按钮下拉主不过是包含两个按钮，在第二个按钮里没有文字只有caret类，在输入框中加只需要将input-group-btn就可以了，这个以前是input-group-addon，增加按钮时候改变类就有了特殊的含义。</p>
+		</section>
+	</div>
+</body>
+</html>
